@@ -1,0 +1,169 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+<div class="layout">
+
+    <section id="proyectos" class="proyectos">
+
+        <h2 class="titulo-proyectos">Proyectos Destacados</h2>
+
+        <div class="proyectos-grid">
+
+            <div class="project-card" (click)="abrirModal('quemini')">
+                <img src="/img/quemini.png" alt="QueMini">
+
+                <div class="project-content">
+                    <h3>QueMini</h3>
+
+                    <div class="badges">
+                        <span>Angular</span>
+                        <span>TypeScript</span>
+                        <span>CSS</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" (click)="abrirModal('pos')">
+                <img src="assets/proyectos/pos.png" alt="POS">
+
+                <div class="project-content">
+                    <h3>Sistema POS</h3>
+
+                    <div class="badges">
+                        <span>Angular</span>
+                        <span>Electron</span>
+                        <span>SQLite</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" (click)="abrirModal('portfolio')">
+                <img src="assets/proyectos/portfolio.png" alt="Portfolio">
+
+                <div class="project-content">
+                    <h3>Portfolio</h3>
+
+                    <div class="badges">
+                        <span>Angular</span>
+                        <span>CSS</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MODAL -->
+
+    @if(modalAbierto){
+
+    <div class="modal-overlay" (click)="cerrarModal()">
+
+        <div class="modal" (click)="$event.stopPropagation()">
+
+            <button class="cerrar-modal" (click)="cerrarModal()">✕</button>
+
+            <img [src]="proyectoSeleccionado.imagen" [alt]="proyectoSeleccionado.nombre">
+
+            <h2>{{ proyectoSeleccionado.nombre }}</h2>
+
+            <p>{{ proyectoSeleccionado.descripcion }}</p>
+
+
+            <div class="modal-links">
+
+                <a [href]="proyectoSeleccionado.web" target="_blank"> 🌐 Link</a>
+
+                <a [href]="proyectoSeleccionado.github" target="_blank">
+                    <i class="devicon-github-original"></i>
+                    GitHub
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    }
+
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <i class="devicon-html5-plain colored"></i>
+                <span>HTML5</span>
+            </div>
+
+            <div class="skill-card">
+                <i class="devicon-javascript-plain colored"></i>
+                <span>JavaScript</span>
+            </div>
+
+            <div class="skill-card">
+                <i class="devicon-github-original"></i>
+                <span>GitHub</span>
+            </div>
+
+            <div class="skill-card">
+                <i class="devicon-angularjs-plain colored"></i>
+                <span>Angular</span>
+            </div>
+
+            <div class="skill-card">
+                <i class="devicon-css3-plain colored"></i>
+                <span>CSS3</span>
+            </div>
+
+            <div class="skill-card">
+                <i class="devicon-typescript-plain colored"></i>
+                <span>TypeScript</span>
+            </div>
+
+            <div class="skill-card">
+                <i class="devicon-git-plain colored"></i>
+                <span>Git</span>
+            </div>
+
+            <div class="skill-card estudiando">
+
+                <div class="logos-estudiando">
+                    <i class="devicon-amazonwebservices-plain-wordmark colored"></i>
+                    <i class="devicon-mysql-original colored"></i>
+                    <i class="devicon-python-plain colored"></i>
+                    <i class="devicon-laravel-original colored"></i>
+                </div>
+
+                <span>ESTUDIANDO</span>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="certificaciones">
+        <h2>Certificados</h2>
+
+        <div class="cert-grid">
+
+            <div class="cert-card">
+                <img src="/img/html.png" alt="">
+                <p>Desarrollo Web</p>
+            </div>
+
+            <div class="cert-card">
+                <img src="assets/certificados/html-css.jpg" alt="">
+                <p>HTML / CSS</p>
+            </div>
+
+            <div class="cert-card">
+                <img src="assets/certificados/git.jpg" alt="">
+                <p>Git & GitHub</p>
+            </div>
+
+        </div>
+    </section>
+
+</div>

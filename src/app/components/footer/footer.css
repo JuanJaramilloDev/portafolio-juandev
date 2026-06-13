@@ -1,0 +1,74 @@
+.logo {
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo-name {
+    color: white;
+}
+
+.logo-punto {
+    color: #38bdf8;
+    animation: pulse 1.5s infinite;
+}
+
+.logo-dev {
+    color: #38bdf8;
+}
+
+.footer {
+    width: 90%;
+    max-width: 1200px;
+    margin: 100px auto 30px;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,.08);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,.1);
+    box-shadow:
+        0 8px 32px rgba(0,0,0,.25),
+        0 0 20px rgba(59,130,246,.15);
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: .3s;
+}
+
+.footer-links a:hover {
+    color: #38bdf8;
+    transform: translateY(-2px);
+}
+
+.footer-copy {
+    color: #94a3b8;
+    font-size: .9rem;
+}
+
+@media (max-width: 768px) {
+
+    .footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
