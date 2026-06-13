@@ -1,5 +1,41 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 <div class="layout">
+
+    <section class="presentacion">
+
+        <div class="presentacion-card">
+
+            <div class="foto-container">
+                <img src="assets/foto-perfil.jpg" alt="Juan Fernando">
+            </div>
+
+            <div class="info-container">
+
+                <h1>
+                    Juan Fernando
+                    <span>Jaramillo</span>
+                </h1>
+
+                <h3>Ingeniero de Sistemas · Desarrollador Frontend</h3>
+
+                <p>
+                    Estudiante de octavo semestre de Ingeniería de Sistemas.
+                    Apasionado por el desarrollo web.
+                </p>
+
+                <div class="social-links">
+                    <a href="https://github.com/JuanJaramilloDev" target="_blank"><i class="devicon-github-original"></i></a>
+                    <a href="https://linkedin.com/in/juanjaramillodev" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="mailto:juanfer2177@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
 
     <section id="proyectos" class="proyectos">
 
@@ -17,6 +53,7 @@
                         <span>Angular</span>
                         <span>TypeScript</span>
                         <span>CSS</span>
+                        <span>LocalStorage</span>
                     </div>
                 </div>
             </div>
@@ -51,8 +88,6 @@
         </div>
 
     </section>
-
-
     <!-- MODAL -->
 
     @if(modalAbierto){
@@ -60,31 +95,18 @@
     <div class="modal-overlay" (click)="cerrarModal()">
 
         <div class="modal" (click)="$event.stopPropagation()">
-
             <button class="cerrar-modal" (click)="cerrarModal()">✕</button>
-
             <img [src]="proyectoSeleccionado.imagen" [alt]="proyectoSeleccionado.nombre">
-
             <h2>{{ proyectoSeleccionado.nombre }}</h2>
-
             <p>{{ proyectoSeleccionado.descripcion }}</p>
 
-
             <div class="modal-links">
-
                 <a [href]="proyectoSeleccionado.web" target="_blank"> 🌐 Link</a>
-
-                <a [href]="proyectoSeleccionado.github" target="_blank">
-                    <i class="devicon-github-original"></i>
-                    GitHub
-                </a>
-
+                <a [href]="proyectoSeleccionado.github" target="_blank"><i class="devicon-github-original"></i>GitHub</a>
             </div>
-
         </div>
 
     </div>
-
     }
 
     <section id="skills" class="skills">
@@ -143,7 +165,7 @@
         </div>
     </section>
 
-    <section class="certificaciones">
+    <section id="experiencia" class="certificaciones">
         <h2>Certificados</h2>
 
         <div class="cert-grid">

@@ -17,7 +17,7 @@ export class Home {
       nombre: 'QueMini',
       imagen: '/img/quemini.png',
       descripcion:
-        'Sistema de gestión de pedidos desarrollado en Angular y TypeScript para la administración de ventas y control de pedidos.',
+        'Sistema de gestión de pedidos desarrollado en Angular y TypeScript para la administración de ventas y control de pedidos.(Sistema web para movil)',
 
       tecnologias: ['Angular', 'TypeScript', 'CSS'],
 
